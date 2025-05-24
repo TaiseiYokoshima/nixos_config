@@ -1,12 +1,8 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
     ];
 
@@ -43,12 +39,18 @@
     LC_TIME = "en_GB.UTF-8";
   };
 
-  # Enable the X11 windowing system.
+  programs.hyprland.enable = true;
+
+
+
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  
+
+
+
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -105,9 +107,26 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-	neovim
-	git
-  fish
+    hyprland
+    waybar
+    alacritty
+    kitty
+    rofi
+    nodejs
+    nodePackages.npm
+    ripgrep
+    gcc
+    stow
+    git
+    neovim
+    fish
+    python3
+    python3Packages.pip
+    unzip
+    clang-tools
+    libinput 
+    wev
+    # debug-events
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
