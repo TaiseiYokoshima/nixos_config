@@ -156,6 +156,7 @@
     blueman
     hyprpaper
     bibata-cursors
+    eza
   ];
 
 
