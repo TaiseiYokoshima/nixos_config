@@ -154,6 +154,8 @@
     libnotify
     brightnessctl
     blueman
+    hyprpaper
+    bibata-cursors
   ];
 
 
