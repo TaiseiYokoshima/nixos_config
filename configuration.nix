@@ -95,11 +95,15 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+
+  programs.fish.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rom = {
     isNormalUser = true;
     description = "rom";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.fish;
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -144,8 +148,21 @@
     keyd
     efibootmgr
     wl-clipboard
-    # debug-events
+    bash
+    swaynotificationcenter
+    pulseaudio
+    libnotify
+    brightnessctl
+    blueman
   ];
+
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+    font-awesome
+  ];
+
+
 
   systemd.services.keyd = {
     description = "keyd keyboard remapping daemon";
