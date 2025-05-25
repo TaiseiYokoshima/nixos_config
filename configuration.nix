@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 
+  # let 
+  #   keyd = import ./keyd.nix { inherit pkgs; };
+  # in
+
 {
   imports =
     [
@@ -8,7 +12,9 @@
 
   # Bootloader.
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda";
+  boot.loader.grub.efiSupport = true;
+  boot.loader.grub.device = "nodev";
+  boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.useOSProber = true;
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -81,9 +87,9 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.taiseiy = {
+  users.users.rom = {
     isNormalUser = true;
-    description = "Taisei Yokoshiam";
+    description = "rom";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
@@ -91,8 +97,8 @@
   };
 
   # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "taiseiy";
+  services.displayManager.autoLogin.enable = false;
+  services.displayManager.autoLogin.user = "rom";
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
@@ -126,8 +132,24 @@
     clang-tools
     libinput 
     wev
+    keyd
     # debug-events
   ];
+
+  systemd.services.keyd = {
+    description = "keyd keyboard remapping daemon";
+    wantedBy = [ "multi-user.target"];
+
+    serviceConfig = {
+        ExecStart = "${pkgs.keyd}/bin/keyd";
+        Restart = "on-failure";
+    };
+  };
+
+
+  environment.etc."keyd/default.conf".source = ./default.conf;
+
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
