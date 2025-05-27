@@ -116,6 +116,7 @@
     hyprpaper
     bibata-cursors
     eza
+    home-manager
   ];
 
 
@@ -138,6 +139,9 @@
 
 
   environment.etc."keyd/default.conf".source = ./default.conf;
+
+
+  nix.settings.experimental-features = [ "nix-command" "flakes"];
 
 
   system.stateVersion = "25.05";
