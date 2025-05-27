@@ -3,7 +3,7 @@
 ... 
 }:
 let 
-  dotfiles = /home/rom/nixos_config/dotfiles;
+  dotfiles = /home/rom/.dotfiles;
 in
 {
   home.username = "rom";
