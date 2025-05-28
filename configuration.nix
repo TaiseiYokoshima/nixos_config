@@ -50,56 +50,10 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-  services.xserver.desktopManager.runXdgAutostartIfNone = true;
-
-  i18n.inputMethod = {
-    type = "fcitx5";
-    enable = true;
-    # enable = false;
-    fcitx5.addons = with pkgs; [
-      fcitx5-mozc
-      fcitx5-gtk
-    ];
-
-
-  #   fcitx5.settings = {
-  #     inputMethod = {
-  #       "Groups/0" = {
-  #         "Name" = "Default";
-  #         "Default Layout" = "us";
-  #         "DefaultIM" = "keyboard-us";
-  #       };
-  #
-  #       "Groups/0/Items/0" = {
-  #         "Name" = "keybord-us";
-  #         "Layout" = "us";
-  #       };
-  #
-  #       "Groups/0/Items/1" = {
-  #         "Name" = "mozc";
-  #         "Layout" = null;
-  #       };
-  #
-  #       "GroupOrder" = {
-  #         "0" = "Default";
-  #       };
-  #     };
-  #
-  #     globalOptions = {
-  #       "Hotkey/TriggerKeys" = {
-  #         "0" = "Super+Escape";
-  #       };
-  #     };
-  # 
-  #   };
-
-  };
-
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
-
 
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -109,7 +63,6 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-
 
 
   programs.fish.enable = true;
@@ -163,10 +116,6 @@
 
     grim
     slurp
-
-    # flameshot
-    # grimblast
-    # sway-contrib.grimshot
   ];
 
 

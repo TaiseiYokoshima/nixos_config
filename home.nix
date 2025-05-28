@@ -8,7 +8,7 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "flameshot-org";
       repo = "flameshot";
-      rev = "3d21e4967b68e9ce80fb2238857aa1bf12c7b905";
+      rev = "2e45e85d331ece2729d613ec705786ab1cf7a5b5";
       sha256 = "sha256-OLRtF/yjHDN+sIbgilBZ6sBZ3FO6K533kFC1L2peugc=";
     };
     cmakeFlags = [
@@ -22,8 +22,8 @@ let
   dotfiles = pkgs.fetchFromGitHub {
     owner = "TaiseiYokoshima";
     repo = ".dotfiles";
-    rev = "f2718c4ac630f05e52413467d906a4a3046eb75a";
-    sha256 = "h27LhIMaPUXIxr9TEcQNUQJyy3NYPJA3REyhURmGNT0=";
+    rev = "845bd63007b3121e84df41a1cf53d43b0cd14652";
+    sha256 = "qOBXcL+JKdIPR+lxaAKqvY8rnl/xKOpKqRPWhRiLZDw=";
     fetchSubmodules = true;
   };
 
@@ -55,11 +55,27 @@ in
       ".config/wallpapers".source = "${dotfiles}/wallpapers";
       ".config/scripts".source = "${dotfiles}/scripts";
       ".config/dunst".source = "${dotfiles}/dunst";
+      ".config/fcitx5".source = "${dotfiles}/fcitx5";
+  };
+
+
+  i18n.inputMethod = {
+    type = "fcitx5";
+    enable = true;
+    fcitx5.addons = with pkgs; [
+      fcitx5-mozc
+      fcitx5-gtk
+    ];
   };
 
 
   home.packages = with pkgs; [
     flameshotGrim
+
+    # fcitx5
+    # fcitx5-mozc
+    # fcitx5-gtk
+    # fcitx5-configtool
   ];
 
 
@@ -68,17 +84,6 @@ in
     enable = true;
     package = flameshotGrim;
   };
-
-
-
-  # xsession.enable = true;
-  # home.sessionVariables = {
-  #   GTK_IM_MODULE = "fcitx";
-  #   QT_IM_MODULE = "fcitx";
-  #   XMODIFIERS = "@im=fcitx";
-  #   INPUT_METHOD = "fcitx";
-  # };
-
 
 
 
