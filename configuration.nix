@@ -116,9 +116,30 @@
 
     grim
     slurp
+    flatpak
+
+    gcc
+    binutils
+    rustup 
+    rustc
+    cargo
+    direnv
+    xclip
+    duf
+    eza
+    fd
+    rustup
+    pkg-config
+    openssl
+    postgresql
+    
+
+    dconf
+    
   ];
 
 
+  programs.dconf.enable = true;
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono

@@ -1,5 +1,5 @@
 # dotfiles, 
-{ config, pkgs,
+{ config, pkgs, lib,
 ... 
 }:
 let 
@@ -71,6 +71,11 @@ in
 
   home.packages = with pkgs; [
     flameshotGrim
+    dconf
+
+    # gcc
+    # rustup
+    # postgresql
 
     # fcitx5
     # fcitx5-mozc
@@ -79,11 +84,50 @@ in
   ];
 
 
+  # gtk.enable = true;
+  # gtk.theme.name = "Adwaita-dark";
+  # home.sessionVariables.GTK_THEME = "Adwaita-dark"; 
+  #
+  # gtk.gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
+  # gtk.gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;
+  #
 
   services.flameshot = {
     enable = true;
     package = flameshotGrim;
   };
+
+
+  # programs.dconf.enable = true;
+  # programs.dconf.profiles.user = {
+  #  databases = [{
+  #    settings = {
+  #      "org/gnome/desktop/interface" = {
+  #        color-scheme = "prefer-dark";
+  #        clock-format = "24h";
+  #        clock-show-weekday = true;
+  #      };
+  #    };
+  #  }];
+  # };
+  # services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
+  #  [org.gnome.mutter]
+  #  check-alive-timeout=60000
+  # '';
+
+
+  # home.activation.setDarkMode = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+  #   gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
+  # '';
+
+
+
+
+  home.activation.setGnomeDarkMode = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    ${pkgs.glib}/bin/gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+    ${pkgs.glib}/bin/gsettings set org.gnome.desktop.interface clock-format '24h'
+    ${pkgs.glib}/bin/gsettings set org.gnome.desktop.interface clock-show-weekday true
+  '';
 
 
 
