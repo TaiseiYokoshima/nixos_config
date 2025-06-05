@@ -1,11 +1,7 @@
-{ config, ... }:
+{ pkgs }:
 {
-  users.users.rom = {
-    isNormalUser = true;
-    description = "rom";
-    extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.fish;
-    packages = with pkgs; [
-    ];
-  };
+  isNormalUser = true;
+  description = "rom";
+  extraGroups = [ "networkmanager" "wheel" ];
+  shell = pkgs.fish;
 }

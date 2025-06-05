@@ -39,10 +39,12 @@ in
   };
 
   imports = [
-    # ./fonts.nix
-    ./inputs.nix
+    # ./inputs.nix
     ./packages.nix
     ./gnome_apps.nix
   ];
+
+
+  # wayland.windowManager.hyprland.enable = true;
 
 }

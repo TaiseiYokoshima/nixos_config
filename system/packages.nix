@@ -13,7 +13,6 @@ with pkgs; [
   git
   neovim
   curl
-  net-tools
   wl-clipboard
 
 

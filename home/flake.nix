@@ -22,7 +22,7 @@
     homeConfigurations = {
       rom = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./rom/home.nix ];
+        modules = [ ./home.nix ];
       };
     };
 
