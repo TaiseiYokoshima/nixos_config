@@ -39,7 +39,7 @@ in
   };
 
   imports = [
-    ./fonts.nix
+    # ./fonts.nix
     ./inputs.nix
     ./packages.nix
     ./gnome_apps.nix

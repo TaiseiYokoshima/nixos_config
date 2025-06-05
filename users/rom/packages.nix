@@ -38,6 +38,12 @@
     alacritty
     kitty
     rofi
+
+
+    nerd-fonts.jetbrains-mono
+    font-awesome
+    noto-fonts-cjk-sans
+
   ];
 
 }
