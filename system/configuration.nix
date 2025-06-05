@@ -30,7 +30,7 @@
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
-  time.timeZone = "Europe/London";
+  time.timeZone = "Asia/Tokyo";
   i18n.defaultLocale = "en_GB.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -81,71 +81,34 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    hyprland
-    waybar
-    alacritty
-    kitty
-    rofi
-    nodejs
-    nodePackages.npm
-    ripgrep
-    gcc
-    stow
+    bash
+    zsh
+    fish
+    nushell
+
+
+    coreutils
     git
     neovim
-    fish
-    python3
-    python3Packages.pip
-    unzip
-    clang-tools
-    libinput 
-    wev
-    keyd
-    efibootmgr
+    curl
+    net-tools
     wl-clipboard
-    bash
-    swaynotificationcenter
-    pulseaudio
-    libnotify
-    brightnessctl
-    blueman
-    hyprpaper
-    bibata-cursors
-    eza
-    home-manager
 
-    grim
-    slurp
+
+
+    keyd
+
+
+
+    home-manager
     flatpak
 
-    gcc
-    binutils
-    rustup 
-    rustc
-    cargo
-    direnv
-    xclip
-    duf
-    eza
-    fd
-    rustup
-    pkg-config
-    openssl
-    postgresql
-    
-
-    dconf
     
   ];
 
 
   programs.dconf.enable = true;
 
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-    font-awesome
-    noto-fonts-cjk-sans
-  ];
 
 
 
