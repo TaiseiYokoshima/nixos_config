@@ -10,7 +10,6 @@
       ./services.nix
       ./keyd.nix
       ./locale.nix
-      ./inputs.nix
     ];
 
   users.users.rom = import ./users.nix { inherit pkgs; };

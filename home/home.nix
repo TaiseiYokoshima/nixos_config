@@ -30,7 +30,7 @@
   };
 
   imports = [
-    # ./inputs.nix
+    ./inputs.nix
     ./packages.nix
     ./gnome_apps.nix
   ];
