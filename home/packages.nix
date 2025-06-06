@@ -33,7 +33,7 @@
     brightnessctl
     hyprpaper
 
-    hyprland
+    # hyprland
     waybar
     alacritty
     kitty

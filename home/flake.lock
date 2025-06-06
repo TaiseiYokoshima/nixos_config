@@ -2,11 +2,11 @@
   "nodes": {
     "dotfiles": {
       "locked": {
-        "lastModified": 1749178056,
-        "narHash": "sha256-d9WO2xA5DwBNQM7bZ67FnHRjYERYJf91Ldf3Bsy7mx0=",
+        "lastModified": 1749185063,
+        "narHash": "sha256-6AVyH/eP6fjKPE7Qr/e3TC/DM3D6Os8zI+FY0zMKfiE=",
         "ref": "refs/heads/main",
-        "rev": "75255dd5449de1834f208661758037317e488ab7",
-        "revCount": 16,
+        "rev": "830422006f3ecf7a1261f8cf42d5b031fd07a894",
+        "revCount": 21,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/TaiseiYokoshima/.dotfiles"
