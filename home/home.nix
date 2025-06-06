@@ -1,13 +1,4 @@
-{ config, pkgs, lib, ... }:
-let 
-  dotfiles = pkgs.fetchFromGitHub {
-    owner = "TaiseiYokoshima";
-    repo = ".dotfiles";
-    rev = "845bd63007b3121e84df41a1cf53d43b0cd14652";
-    sha256 = "qOBXcL+JKdIPR+lxaAKqvY8rnl/xKOpKqRPWhRiLZDw=";
-    fetchSubmodules = true;
-  };
-in
+{ config, pkgs, lib, dotfiles, ... }:
 {
   programs.home-manager.enable = true;
   home.stateVersion = "25.05";
@@ -18,24 +9,24 @@ in
 
 
   home.file = {
-    ".config/alacritty".source = "${dotfiles}/alacritty";
-    ".config/kitty".source = "${dotfiles}/kitty";
-    ".config/wezterm".source = "${dotfiles}/wezterm";
+    ".config/alacritty".source   = dotfiles.outputs.alacritty;
+    ".config/kitty".source       = dotfiles.outputs.kitty;
+    ".config/wezterm".source     = dotfiles.outputs.wezterm;
 
-    ".config/nvim".source = "${dotfiles}/nvim";
-    ".config/fish".source = "${dotfiles}/fish";
-    ".config/zellij".source = "${dotfiles}/zellij";
-    ".config/tmux".source = "${dotfiles}/tmux";
+    ".config/nvim".source        = dotfiles.outputs.nvim;
+    ".config/fish".source        = dotfiles.outputs.fish;
+    ".config/zellij".source      = dotfiles.outputs.zellij;
+    ".config/tmux".source        = dotfiles.outputs.tmux;
 
-    ".config/hypr".source = "${dotfiles}/hypr";
-    ".config/sway".source = "${dotfiles}/sway";
+    ".config/hypr".source        = dotfiles.outputs.hypr;
+    ".config/sway".source        = dotfiles.outputs.sway;
 
-    ".config/waybar".source = "${dotfiles}/waybar";
-    ".config/rofi".source = "${dotfiles}/rofi";
-    ".config/wallpapers".source = "${dotfiles}/wallpapers";
-    ".config/scripts".source = "${dotfiles}/scripts";
-    ".config/dunst".source = "${dotfiles}/dunst";
-    ".config/fcitx5".source = "${dotfiles}/fcitx5";
+    ".config/waybar".source      = dotfiles.outputs.waybar;
+    ".config/rofi".source        = dotfiles.outputs.rofi;
+    ".config/wallpapers".source  = dotfiles.outputs.wallpapers;
+    ".config/scripts".source     = dotfiles.outputs.scripts;
+    ".config/dunst".source       = dotfiles.outputs.dunst;
+    ".config/fcitx5".source      = dotfiles.outputs.fcitx5;
   };
 
   imports = [
