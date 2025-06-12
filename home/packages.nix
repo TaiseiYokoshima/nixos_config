@@ -35,14 +35,22 @@
 
     # hyprland
     waybar
-    alacritty
-    kitty
     rofi
 
+    alacritty
+    kitty
+    ghostty
 
     nerd-fonts.jetbrains-mono
     font-awesome
     noto-fonts-cjk-sans
+
+
+    gcc
+    nodejs
+    zip
+    ripgrep
+    zellij
 
   ];
 

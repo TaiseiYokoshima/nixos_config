@@ -21,4 +21,12 @@ with pkgs; [
 
   home-manager
   flatpak
+
+  gcc 
+  # tree-sitter
+
+
+  nix-index
+  # nix-index-database
+  comma
 ]

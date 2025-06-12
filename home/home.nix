@@ -8,6 +8,13 @@
   home.homeDirectory = "/home/rom";
 
 
+
+  home.sessionPath = [
+    "$HOME/.local/bin"
+  ];
+
+
+
   home.file = {
     ".config/alacritty".source   = dotfiles.outputs.alacritty;
     ".config/kitty".source       = dotfiles.outputs.kitty;

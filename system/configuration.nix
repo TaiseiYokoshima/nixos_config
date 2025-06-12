@@ -22,5 +22,23 @@
 
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes"];
+
+  
+  programs.nix-ld.enable = true;
+
+
+  # programs.command-not-found.enable = false;
+  #
+  # programs.nix-index = {
+  #   enable = true;
+  #   enableBashIntegration = true;
+  #   enableZshIntegration = true;
+  #   enableFishIntegration = true;
+  # };
+  
+
+  virtualisation.docker.enable = true;
+
+
   system.stateVersion = "25.05";
 }
