@@ -12,6 +12,7 @@ with pkgs; [
   coreutils
   git
   neovim
+  nano
   curl
   wl-clipboard
 
@@ -26,7 +27,7 @@ with pkgs; [
   # tree-sitter
 
 
-  nix-index
+  # nix-index
   # nix-index-database
   comma
 ]

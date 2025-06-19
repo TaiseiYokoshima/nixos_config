@@ -1,17 +1,20 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, nvim_wrapped, unstable, ... }:
 {
 
-  home.packages = with pkgs; [
+  home.packages = (with pkgs; [
     bash 
     zsh
     fish 
     nushell
 
     git
-    neovim
+    # neovim
+    # nvim_wrapped.packages.default
+    nvim_wrapped.packages."x86_64-linux".default
     wl-clipboard
     curl
     
+    gcc
   
     dconf
     grim
@@ -26,6 +29,9 @@
 
     python3
     python3Packages.pip
+    nodejs
+
+
     wev
     pulseaudio
     unzip
@@ -46,12 +52,16 @@
     noto-fonts-cjk-sans
 
 
-    gcc
-    nodejs
-    zip
-    ripgrep
     zellij
+    tmux
 
-  ];
+    fzf
+    bat
+
+    wezterm
+
+  ]) ++ (with unstable; [
+    # wezterm
+  ]);
 
 }
