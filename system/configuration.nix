@@ -41,4 +41,13 @@
 
 
   system.stateVersion = "25.05";
+
+
+
+  fonts.packages = with pkgs; [
+    font-awesome
+    noto-fonts-cjk-sans
+  ];
+
+
 }

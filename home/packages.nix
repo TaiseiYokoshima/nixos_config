@@ -60,6 +60,8 @@
 
     wezterm
 
+    jetbrains.pycharm-community
+
   ]) ++ (with unstable; [
     # wezterm
   ]);
