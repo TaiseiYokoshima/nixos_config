@@ -32,11 +32,11 @@
     },
     "dotfiles": {
       "locked": {
-        "lastModified": 1751827637,
-        "narHash": "sha256-gkjLSz6+F7ETdwCWFMFAZtNdLUKOIKPbgEW+ZK3mlLg=",
+        "lastModified": 1752446025,
+        "narHash": "sha256-P3AFGFDZuZlEKbCTGVeisgf+V4RVfvz/SN4Y6N0qKHc=",
         "ref": "refs/heads/main",
-        "rev": "84cd66abbba477b43feedc1db0dc1ff007b83b54",
-        "revCount": 22,
+        "rev": "5de4d75ffcfc09477d00c940f223c3e970207080",
+        "revCount": 23,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/TaiseiYokoshima/.dotfiles"
@@ -54,11 +54,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1752391422,
+        "lastModified": 1752544374,
         "narHash": "sha256-ReX0NG6nIAEtQQjLqeu1vUU2jjZuMlpymNtb4VQYeus=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "c26266790678863cce8e7460fdbf0d80991b1906",
+        "rev": "2e00ed310c218127e02ffcf28ddd4e0f669fde3e",
         "type": "github"
       },
       "original": {
@@ -241,11 +241,11 @@
     },
     "unstable_nixpkgs": {
       "locked": {
-        "lastModified": 1751984180,
-        "narHash": "sha256-LwWRsENAZJKUdD3SpLluwDmdXY9F45ZEgCb0X+xgOL0=",
+        "lastModified": 1752480373,
+        "narHash": "sha256-JHQbm+OcGp32wAsXTE/FLYGNpb+4GLi5oTvCxwSoBOA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
+        "rev": "62e0f05ede1da0d54515d4ea8ce9c733f12d9f08",
         "type": "github"
       },
       "original": {
