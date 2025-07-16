@@ -32,11 +32,11 @@
     },
     "dotfiles": {
       "locked": {
-        "lastModified": 1752446025,
-        "narHash": "sha256-P3AFGFDZuZlEKbCTGVeisgf+V4RVfvz/SN4Y6N0qKHc=",
+        "lastModified": 1752686884,
+        "narHash": "sha256-YrhBwForrTib4Y3Nh3se17St8kUuHhEWqWk6Q2levbw=",
         "ref": "refs/heads/main",
-        "rev": "5de4d75ffcfc09477d00c940f223c3e970207080",
-        "revCount": 23,
+        "rev": "cd5556c2ac32b846ee1a162e1ae2e2122d8cdfdc",
+        "revCount": 25,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/TaiseiYokoshima/.dotfiles"
@@ -115,11 +115,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1752308619,
-        "narHash": "sha256-pzrVLKRQNPrii06Rm09Q0i0dq3wt2t2pciT/GNq5EZQ=",
+        "lastModified": 1752436162,
+        "narHash": "sha256-Kt1UIPi7kZqkSc5HVj6UY5YLHHEzPBkgpNUByuyxtlw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "650e572363c091045cdbc5b36b0f4c1f614d3058",
+        "rev": "dfcd5b901dbab46c9c6e80b265648481aafb01f8",
         "type": "github"
       },
       "original": {
@@ -157,11 +157,11 @@
         "ts_ls": "ts_ls"
       },
       "locked": {
-        "lastModified": 1752442477,
-        "narHash": "sha256-08nezcQyv29kz8Vr4lKiVNcm6mzA84WF9b/GjNmVOB8=",
+        "lastModified": 1752600991,
+        "narHash": "sha256-aif5sKnyixhOoy5efsYLcgujOX3wJzHD8Bo6f5jcvDU=",
         "owner": "TaiseiYokoshima",
         "repo": "nvim",
-        "rev": "5b42de59d0585b66c6d79615846de3fe083104b8",
+        "rev": "afa4ef86f996e4c5486762e40cc79e8a3aa9babe",
         "type": "github"
       },
       "original": {
