@@ -8,8 +8,6 @@
     nushell
 
     git
-    # neovim
-    # nvim_wrapped.packages.default
     nvim_wrapped.packages."x86_64-linux".default
     wl-clipboard
     curl
@@ -46,21 +44,23 @@
     alacritty
     kitty
     ghostty
+    wezterm
+
+    zellij
+    tmux
 
     nerd-fonts.jetbrains-mono
     font-awesome
     noto-fonts-cjk-sans
 
 
-    zellij
-    tmux
 
     fzf
     bat
 
-    wezterm
 
-    jetbrains.pycharm-community
+
+   playerctl
 
   ]) ++ (with unstable; [
     # wezterm
