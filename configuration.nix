@@ -1,53 +1,42 @@
 { config, pkgs, ... }:
-
 {
-  imports =
-    [
+   imports =
+      [
       ./hardware-configuration.nix
-
-      ./boot.nix
-      ./programs.nix
-      ./services.nix
-      ./keyd.nix
-      ./locale.nix
-    ];
-
-  users.users.rom = import ./users.nix { inherit pkgs; };
-  environment.systemPackages = import ./packages.nix { inherit pkgs; };
-
-  networking.hostName = "nixos";
-  networking.networkmanager.enable = true;
-
-  time.timeZone = "Europe/London";
-
-  nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes"];
-
-  
-  programs.nix-ld.enable = true;
+         ./boot.nix
+         ./programs.nix
+         ./packages.nix
+         ./services.nix
+         ./keyd.nix
+         ./locale.nix
+         ./users.nix
+      ];
 
 
-  # programs.command-not-found.enable = false;
-  #
-  # programs.nix-index = {
-  #   enable = true;
-  #   enableBashIntegration = true;
-  #   enableZshIntegration = true;
-  #   enableFishIntegration = true;
-  # };
-  
+   networking.hostName = "nixos";
+   networking.networkmanager.enable = true;
 
-  virtualisation.docker.enable = true;
+   time.timeZone = "Europe/London";
+
+   nixpkgs.config.allowUnfree = true;
+   nix.settings.experimental-features = [ "nix-command" "flakes"];
 
 
-  system.stateVersion = "25.05";
+   programs.nix-ld.enable = true;
 
 
+# programs.command-not-found.enable = false;
+#
+# programs.nix-index = {
+#   enable = true;
+#   enableBashIntegration = true;
+#   enableZshIntegration = true;
+#   enableFishIntegration = true;
+# };
 
-  fonts.packages = with pkgs; [
-    font-awesome
-    noto-fonts-cjk-sans
-  ];
+
+   virtualisation.docker.enable = true;
 
 
+   system.stateVersion = "25.05";
 }

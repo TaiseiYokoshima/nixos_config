@@ -1,8 +1,9 @@
-{ pkgs }:
+{ pkgs, ... }:
 {
-  isNormalUser = true;
-  description = "rom";
-  extraGroups = [ "networkmanager" "wheel" "docker" ];
-  shell = pkgs.fish;
-
+   users.users.rom = {
+      isNormalUser = true;
+      description = "rom";
+      extraGroups = [ "networkmanager" "wheel" "docker" ];
+      shell = pkgs.fish;
+   };
 }

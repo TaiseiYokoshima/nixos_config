@@ -1,33 +1,32 @@
-{ pkgs }:
-
-with pkgs; [
-# shells
-  bash
-  zsh
-  fish
-  nushell
-
-
-# other cli tools
-  coreutils
-  git
-  neovim
-  nano
-  curl
-  wl-clipboard
+{ pkgs, ... }:
+{
+   environment.systemPackages = with pkgs; [
+      # shells
+      bash
+      zsh
+      fish
+      nushell
 
 
-# remapper
-  keyd
+      # other cli tools
+      coreutils
+      git
+      neovim
+      nano
+      curl
+      wl-clipboard
 
-  home-manager
-  flatpak
 
-  gcc 
-  # tree-sitter
+      # remapper
+      keyd
+
+      home-manager
+
+      gcc 
 
 
-  # nix-index
-  # nix-index-database
-  comma
-]
+      # nix-index
+      # nix-index-database
+      comma
+   ];
+}
