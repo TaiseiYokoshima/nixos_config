@@ -10,7 +10,7 @@
       ./locale.nix
       ./users.nix
       ./networking.nix
-      ./docker.nix
+      ./virtualization.nix
    ];
 
    nixpkgs.config.allowUnfree = true;

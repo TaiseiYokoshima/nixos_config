@@ -28,5 +28,11 @@
       # nix-index
       # nix-index-database
       comma
+
+
+      virt-manager
+      qemu
+      libvirt
+      virt-viewer
    ];
 }
