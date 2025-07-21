@@ -1,42 +1,27 @@
 { config, pkgs, ... }:
 {
-   imports =
-      [
+   imports = [
       ./hardware-configuration.nix
-         ./boot.nix
-         ./programs.nix
-         ./packages.nix
-         ./services.nix
-         ./keyd.nix
-         ./locale.nix
-         ./users.nix
-      ];
-
-
-   networking.hostName = "nixos";
-   networking.networkmanager.enable = true;
-
-   time.timeZone = "Europe/London";
+      ./boot.nix
+      ./programs.nix
+      ./packages.nix
+      ./services.nix
+      ./keyd.nix
+      ./locale.nix
+      ./users.nix
+      ./networking.nix
+      ./docker.nix
+   ];
 
    nixpkgs.config.allowUnfree = true;
    nix.settings.experimental-features = [ "nix-command" "flakes"];
-
-
-   programs.nix-ld.enable = true;
-
-
-# programs.command-not-found.enable = false;
-#
-# programs.nix-index = {
-#   enable = true;
-#   enableBashIntegration = true;
-#   enableZshIntegration = true;
-#   enableFishIntegration = true;
-# };
-
-
-   virtualisation.docker.enable = true;
-
-
    system.stateVersion = "25.05";
+
+   # programs.command-not-found.enable = false;
+   # programs.nix-index = {
+   #   enable = true;
+   #   enableBashIntegration = true;
+   #   enableZshIntegration = true;
+   #   enableFishIntegration = true;
+   # };
 }
