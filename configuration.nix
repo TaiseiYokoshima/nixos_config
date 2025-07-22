@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
    imports = [
-      ./hardware-configuration.nix
+      ./amd-hardware-configuration.nix
       ./boot.nix
       ./programs.nix
       ./packages.nix
