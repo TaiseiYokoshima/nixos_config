@@ -6,7 +6,7 @@
    };
 
 
-   outputs = { self, nixpkgs, home-manager, ... }: 
+   outputs = { nixpkgs, ... }: 
    let 
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -15,6 +15,17 @@
    {
 
       nixosConfigurations = {
+         pc = lib.nixosSystem { 
+            inherit system;
+            modules = [ 
+               ./configuration.nix 
+            ];
+
+            specialArgs = {
+               hardware_config = ./hardware/pc/abf497471e334365af30cf48e20ed134.nix;
+            };
+         };
+
          intel = lib.nixosSystem {
             inherit system;
             modules = [ 
