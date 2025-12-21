@@ -15,6 +15,19 @@
    {
 
       nixosConfigurations = {
+
+         dell_laptop = lib.nixosSystem {
+            inherit system;
+            modules = [ 
+               ./configuration.nix 
+            ];
+            specialArgs = {
+               hardwarePath = ./hardware/dell_laptop/afb403a99e904bc996fd65ebfb69c9f6.nix;
+            };
+         };
+
+
+
          intel = lib.nixosSystem {
             inherit system;
             modules = [ 

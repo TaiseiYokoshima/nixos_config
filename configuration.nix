@@ -1,12 +1,7 @@
-{ config, pkgs, cpu, ... }:
-let 
-   hardwareConfigFile = if cpu == "intel" then ./hardware/intel-hardware-configuration.nix
-                     else if cpu == "amd" then ./hardware/amd-hardware-configuration.nix
-                     else throw "Unknown cpu: ${cpu}";
-in
+{ config, pkgs, hardwarePath, ... }:
 {
    imports = [
-      hardwareConfigFile
+      hardwarePath
       ./boot.nix
       ./programs.nix
       ./packages.nix
