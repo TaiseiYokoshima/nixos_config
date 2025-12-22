@@ -14,9 +14,9 @@
       {
 
          nixosConfigurations = {
-
             dell_laptop = lib.nixosSystem {
                inherit system;
+               inherit pkgs;
                modules = [
                   ./configuration.nix
                ];
