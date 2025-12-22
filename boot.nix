@@ -1,23 +1,34 @@
 { config, pkgs, ... }:
 {
-  boot.loader = {
-    efi.canTouchEfiVariables = true;
+   boot.loader = {
+      efi.canTouchEfiVariables = true;
 
-    grub = {
-      enable = true;
-      efiSupport = true;
-      device = "nodev";
+      timeout = 5;
 
-      useOSProber = true;
-      default = "saved";
-      extraConfig = "GRUB_DEFAULT=saved\nGRUB_SAVEDEFAULT=true";
-      extraEntries = ''
-        menuentry "UEFI" {
-          fwsetup
-        }
-      '';
-    };
+      systemd-boot = {
+         enable = true;
+         configurationLimit = null;
+         consoleMode = "max";
+      };
 
-  };
+      grub = {
+         efiSupport = true;
+         device = "nodev";
 
+         useOSProber = true;
+         default = "saved";
+
+         extraConfig = ''
+            GRUB_DEFAULT=saved
+            GRUB_SAVEDEFAULT=true
+         '';
+
+         extraEntries = ''
+            menuentry "UEFI" {
+              fwsetup
+            }
+         '';
+      };
+
+   };
 }
