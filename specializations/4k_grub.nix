@@ -9,5 +9,3 @@
    boot.loader.grub.gfxmodeEfi =  "1600x1200x32,auto";
    boot.loader.grub.gfxmodeBios = "1600x1200x32,auto";
 }
-
-

@@ -1,7 +1,6 @@
-{ config, pkgs, hardwarePath, ... }:
+{ ... }:
 {
    imports = [
-      hardwarePath
       ./boot.nix
       ./programs.nix
       ./packages.nix
