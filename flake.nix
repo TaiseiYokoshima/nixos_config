@@ -18,33 +18,17 @@
                inherit system;
                modules = [
                   ./configuration.nix
+                  ./entries/dell_laptop
                ];
-               specialArgs = {
-                  hardwarePath = ./hardware/dell_laptop/afb403a99e904bc996fd65ebfb69c9f6.nix;
-               };
             };
 
-            intel = lib.nixosSystem {
+            pc = lib.nixosSystem {
                inherit system;
                modules = [
                   ./configuration.nix
+                  ./entries/pc
                ];
-               specialArgs = {
-                  cpu = "intel";
-               };
             };
-
-            amd = lib.nixosSystem {
-               inherit system;
-               modules = [
-                  ./configuration.nix
-               ];
-               specialArgs = {
-                  cpu = "amd";
-               };
-            };
-
          };
-
       };
 }
