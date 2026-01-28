@@ -8,7 +8,7 @@
       systemd-boot = {
          enable = true;
          configurationLimit = null;
-         consoleMode = "max";
+         # consoleMode = "max";
       };
 
       grub = {
