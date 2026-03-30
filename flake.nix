@@ -3,9 +3,11 @@
 
    inputs = {
       nixpkgs.url = "nixpkgs/nixos-25.11";
+      hyprland.url = "github:hyprwm/Hyprland";
    };
 
-   outputs = { nixpkgs, ... }:
+
+   outputs = { nixpkgs, ... } @inputs : 
       let
          lib = nixpkgs.lib;
          system = "x86_64-linux";
@@ -23,6 +25,9 @@
             };
 
             pc = lib.nixosSystem {
+               specialArgs = {
+                  inherit inputs;
+               };
                inherit system;
                modules = [
                   ./configuration.nix
