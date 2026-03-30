@@ -6,6 +6,8 @@
    services.displayManager.gdm.enable = true;
    services.desktopManager.gnome.enable = true;
 
+   services.mullvad-vpn.enable = true;
+
    services.pulseaudio.enable = false;
    security.rtkit.enable = true;
 
