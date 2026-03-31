@@ -8,36 +8,10 @@
          url = "github:nix-community/nix-index-database";
          inputs.nixpkgs.follows = "nixpkgs";
       };
+
+      flake-parts.url = "github:hercules-ci/flake-parts";
+      import-tree.url = "github:vic/import-tree";
    };
 
-
-   outputs = { nixpkgs, nix-index-database, ... } @inputs : 
-      let
-         lib = nixpkgs.lib;
-         system = "x86_64-linux";
-         pkgs = nixpkgs.legacyPackages.${system};
-      in
-      {
-
-         nixosConfigurations = {
-            dell_laptop = lib.nixosSystem {
-               inherit system;
-               modules = [
-                  ./configuration.nix
-                  ./entries/dell_laptop
-               ];
-            };
-
-            pc = lib.nixosSystem {
-               specialArgs = {
-                  inherit inputs;
-               };
-               inherit system;
-               modules = [
-                  ./configuration.nix
-                  ./entries/pc
-               ];
-            };
-         };
-      };
+   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./parts);
 }
