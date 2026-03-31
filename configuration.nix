@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, ... } :
 {
    imports = [
       ./boot.nix
@@ -10,9 +10,7 @@
       ./users.nix
       ./networking.nix
       ./virtualization.nix
-
-
-      # ./comma_command.nix
+      ./comma_command.nix
    ];
 
 

@@ -1,10 +1,11 @@
-{ ... }:
+{ inputs, ... }:
 {
-   programs.command-not-found.enable = false;
-   programs.nix-index = {
-     enable = true;
-     enableBashIntegration = true;
-     enableZshIntegration = true;
-     enableFishIntegration = true;
-   };
+
+   programs.nix-index-database.comma.enable = true;
+   imports = [
+      inputs.nix-index-database.nixosModules.default
+   ];
+
+
+
 }
