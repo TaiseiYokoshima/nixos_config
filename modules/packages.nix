@@ -1,14 +1,11 @@
-{ pkgs, ... }:
-{
-   environment.systemPackages = with pkgs; [
-      # shells
+{pkgs, ...}: {
+  flake.nixosModules.packages = {pkgs, ...}: {
+    environment.systemPackages = with pkgs; [
       bash
       zsh
       fish
       nushell
 
-
-      # other cli tools
       coreutils
       git
       neovim
@@ -16,23 +13,18 @@
       curl
       wl-clipboard
 
-
-      # remapper
       keyd
 
       home-manager
 
-      gcc 
+      gcc
 
-
-      # nix-index
-      # nix-index-database
       comma
-
 
       virt-manager
       qemu
       libvirt
       virt-viewer
-   ];
+    ];
+  };
 }
