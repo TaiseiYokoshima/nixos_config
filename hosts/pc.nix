@@ -30,7 +30,6 @@
       self.nixosModules.users
       self.nixosModules.networking
       self.nixosModules.virtualisation
-      self.nixosModules.comma_command
     ];
   };
 }
