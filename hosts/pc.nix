@@ -9,7 +9,7 @@
     };
 
     modules = [
-      self.nixosModules.pc
+      self.nixosModules.hardware_pc
 
       self.nixosModules.system
       self.nixosModules.nixpkgs
