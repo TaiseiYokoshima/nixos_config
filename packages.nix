@@ -25,11 +25,6 @@
       gcc 
 
 
-      # nix-index
-      # nix-index-database
-      comma
-
-
       virt-manager
       qemu
       libvirt
