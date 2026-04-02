@@ -3,13 +3,13 @@
   self,
   ...
 }: {
-  flake.nixosConfigurations.pc = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.dell_laptop = inputs.nixpkgs.lib.nixosSystem {
     specialArgs = {
       inherit inputs self;
     };
 
     modules = [
-      self.nixosModules.pc
+      self.nixosModules.dell_laptop
 
       self.nixosModules.system
       self.nixosModules.nixpkgs
@@ -31,3 +31,4 @@
     ];
   };
 }
+
