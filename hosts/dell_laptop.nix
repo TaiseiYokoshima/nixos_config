@@ -9,15 +9,15 @@
     };
 
     modules = [
-      self.nixosModules.dell_laptop
+      self.nixosModules.hardware_dell_laptop
 
       self.nixosModules.system
       self.nixosModules.nixpkgs
-      self.nixosModules.nix_language
+      self.nixosModules.nix-language
 
       self.nixosModules.bluetooth
 
-      self.nixosModules.grub_4k
+      self.nixosModules.grub-4k
       self.nixosModules.boot
       self.nixosModules.boot
       self.nixosModules.programs

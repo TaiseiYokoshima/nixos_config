@@ -1,5 +1,4 @@
-{self, ...}: {
-  flake.nixosModules.keyd = {pkgs, ...}: {
+ { self, pkgs, ... }: {
     systemd.services.keyd = {
       description = "keyd keyboard remapping daemon";
       wantedBy = ["multi-user.target"];
@@ -11,5 +10,4 @@
     };
 
     environment.etc."keyd/default.conf".source = (self + /assets/default.conf);
-  };
 }

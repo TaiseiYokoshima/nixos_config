@@ -1,5 +1,4 @@
 {...}: {
-  flake.nixosModules.virtualisation = {...}: {
     virtualisation = {
       docker.enable = true;
 
@@ -8,5 +7,4 @@
         # qemu.networks.default.forwardMode = "bridge";
       };
     };
-  };
 }

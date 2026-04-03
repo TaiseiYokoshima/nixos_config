@@ -1,4 +1,3 @@
-{...}: { flake.nixosModules.services = 
 {pkgs, ...}: {
     services.flatpak.enable = true;
     services.fwupd.enable = true;
@@ -29,5 +28,3 @@
     services.power-profiles-daemon.enable = true;
     services.upower.enable = true;
 }
-
-;}

@@ -1,6 +1,4 @@
-{ ... }:
-{
-   flake.nixosModules.packages = { pkgs, ... }: {
+ { pkgs, ... }: {
       environment.systemPackages = with pkgs; [
          # shells
          bash
@@ -32,6 +30,5 @@
          virt-viewer
       ];
 
-   };
 
 }
