@@ -29,6 +29,5 @@ inputs.nixpkgs.lib.nixosSystem {
       networking
       virtualisation
 
-      test.default
    ];
 }
