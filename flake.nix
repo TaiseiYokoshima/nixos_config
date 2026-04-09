@@ -8,30 +8,27 @@
       myUtils.url = "git+ssh://git@mgt/TaiseiYokoshima/nix_utils";
    };
 
-   outputs =
-      inputs:
-      let
-         getParts = inputs.myUtils.lib.getParts;
-         normalizeDefault = inputs.myUtils.lib.normalizeDefault;
-         filterFlakes = inputs.myUtils.lib.filterFlakes;
+   outputs = inputs @ { self, ... }: {
+      os-modules.boot = import ./modules/boot.nix;
+      hardware.dell_laptop = import ./hardware/dell_laptop.nix;
+      os-modules.test = import ./modules/test;
+
+     nixosConfigurations.dell_laptop = inputs.nixpkgs.lib.nixosSystem {
+       specialArgs = {
+         inherit inputs self;
+       };
+
+       modules = [
+         self.hardware.dell_laptop
+         self.os-modules.boot
+         self.os-modules.test
+       ];
+     };
 
 
-         collectFlakes = dirs: 
-            filterFlakes
-            (  normalizeDefault 
-               (getParts dirs)
-            )
-         ;
 
 
-         dirs = [
-            ./hardware
-            ./hosts
-            ./modules
-         ];
-      in
-      inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-         imports = collectFlakes dirs;
-         systems = [ "x86_64-linux" "aarch64-linux"];
-      };
+
+      
+   };
 }
