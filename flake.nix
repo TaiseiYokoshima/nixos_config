@@ -8,27 +8,17 @@
       myUtils.url = "git+ssh://git@mgt/TaiseiYokoshima/nix_utils";
    };
 
-   outputs = inputs @ { self, ... }: {
-      os-modules.boot = import ./modules/boot.nix;
-      hardware.dell_laptop = import ./hardware/dell_laptop.nix;
-      os-modules.test = import ./modules/test;
+   outputs =
+      inputs@{ self, ... }:
+      let
+         fetchModules = inputs.myUtils.lib.fetchModules;
+         hardware = fetchModules ./hardware;
+         modules = fetchModules ./modules;
+      in
+      {
+         inherit hardware modules;
 
-     nixosConfigurations.dell_laptop = inputs.nixpkgs.lib.nixosSystem {
-       specialArgs = {
-         inherit inputs self;
-       };
-
-       modules = [
-         self.hardware.dell_laptop
-         self.os-modules.boot
-         self.os-modules.test
-       ];
-     };
-
-
-
-
-
-      
-   };
+         nixosConfigurations.pc = import ./hosts/pc.nix { inherit self inputs hardware modules; };
+         nixosConfigurations.dell_laptop = import ./hosts/dell_laptop.nix { inherit self inputs hardware modules; };
+      };
 }
