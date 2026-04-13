@@ -410,11 +410,11 @@
     },
     "myUtils": {
       "locked": {
-        "lastModified": 1775804403,
-        "narHash": "sha256-koqK1+vCfLFZxzmck1QEZAEZNQm4AUm4CGy4f4sg6Do=",
+        "lastModified": 1776094902,
+        "narHash": "sha256-Hk+IJbo2Vodoqo0L8hkyEh1A3uDzgNi9cAaILlmTRBk=",
         "ref": "refs/heads/main",
-        "rev": "29b1146f643d29ebd821ba5b19401bf96fbe78b6",
-        "revCount": 15,
+        "rev": "3cef1d3465fc364bd6f1841ead9d71633dbc1f7a",
+        "revCount": 16,
         "type": "git",
         "url": "ssh://git@mgt/TaiseiYokoshima/nix_utils"
       },
