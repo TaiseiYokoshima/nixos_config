@@ -20,6 +20,7 @@ inputs.nixpkgs.lib.nixosSystem {
       grub-4k
       boot
       boot
+      mullvad
       programs
       packages
       services
