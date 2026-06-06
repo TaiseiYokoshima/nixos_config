@@ -23,7 +23,6 @@ inputs.nixpkgs.lib.nixosSystem {
       programs
       packages
       services
-      keyd
       locale
       users
       networking
