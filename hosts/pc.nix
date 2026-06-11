@@ -21,7 +21,6 @@ inputs.nixpkgs.lib.nixosSystem {
       bluetooth
       grub-4k
       boot
-      boot
       mullvad
       programs
       packages

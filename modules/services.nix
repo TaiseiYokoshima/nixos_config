@@ -1,28 +1,28 @@
-{pkgs, ...}: {
-    services.flatpak.enable = true;
-    services.fwupd.enable = true;
+{ pkgs, ... }: {
+   services.flatpak.enable = true;
+   services.fwupd.enable = true;
 
-    services.displayManager.gdm.enable = true;
-    services.desktopManager.gnome.enable = true;
+   services.displayManager.gdm.enable = true;
+   services.desktopManager.gnome.enable = true;
 
-    services.pulseaudio.enable = false;
-    security.rtkit.enable = true;
+   services.pulseaudio.enable = false;
+   security.rtkit.enable = true;
 
-    services.pipewire = {
+   services.pipewire = {
       enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
-    };
+   };
 
-    xdg.portal = {
+   xdg.portal = {
       enable = true;
       wlr.enable = true;
       extraPortals = with pkgs; [
-        xdg-desktop-portal-wlr
+         xdg-desktop-portal-wlr
       ];
-    };
+   };
 
-    services.power-profiles-daemon.enable = true;
-    services.upower.enable = true;
+   services.power-profiles-daemon.enable = true;
+   services.upower.enable = true;
 }

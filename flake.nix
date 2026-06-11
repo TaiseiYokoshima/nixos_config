@@ -20,9 +20,13 @@
       {
          inherit hardware modules;
 
-         # nixosConfigurations.pc = import ./hosts/pc.nix { inherit self inputs hardware modules; };
-         # nixosConfigurations.dell_laptop = import ./hosts/dell_laptop.nix { inherit self inputs hardware modules; };
-
-         nixosConfigurations = fetchConfigs ./hosts { inherit self inputs hardware modules; };
+         nixosConfigurations = fetchConfigs ./hosts {
+            inherit
+               self
+               inputs
+               hardware
+               modules
+               ;
+         };
       };
 }
