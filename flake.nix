@@ -3,6 +3,7 @@
 
    inputs = {
       nixpkgs.url = "nixpkgs/nixos-26.05";
+      unstable.url = "nixpkgs/nixos-unstable";
       hyprland.url = "github:hyprwm/Hyprland";
       flake-parts.url = "github:hercules-ci/flake-parts";
       myUtils.url = "git+ssh://git@mgt/TaiseiYokoshima/nix_utils";

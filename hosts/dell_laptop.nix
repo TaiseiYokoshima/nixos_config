@@ -13,6 +13,8 @@ inputs.nixpkgs.lib.nixosSystem {
    modules = with modules; [
       hardware.dell_laptop
 
+      unstable-hyprland
+
       system
       nixpkgs
       nix-language

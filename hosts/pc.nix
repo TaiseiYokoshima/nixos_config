@@ -13,6 +13,8 @@ inputs.nixpkgs.lib.nixosSystem {
    modules = with modules; [
       hardware.pc
 
+      unstable-hyprland
+
       system
       nixpkgs
       nix-language
