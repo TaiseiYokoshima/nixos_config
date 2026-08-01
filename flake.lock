@@ -142,11 +142,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1785530188,
-        "narHash": "sha256-C4cGVnlUDTm+mD/wPsm2GKu52F9JFNphDxztuorlCUc=",
+        "lastModified": 1785584663,
+        "narHash": "sha256-EvuKsC01fouOq/hzdw2D3LzuMsP0691N/+uA9QKo3ao=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "cfecc57436f6f76282e12356e1d0401259f1255f",
+        "rev": "3906d66afc537a8cffa86b244846e722a9d75cc0",
         "type": "github"
       },
       "original": {
@@ -434,11 +434,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1785386831,
-        "narHash": "sha256-xQPrEWR75P2lZ/p9pAzIeMd4PtkckDLj6ojo+tWjZQw=",
-        "rev": "21ea275a7c46aef9d4d6ddc962e6d562e9d94183",
+        "lastModified": 1785491804,
+        "narHash": "sha256-GGQER+O/plhJCG35JVsKYVwI8qtOKR7UB4E3e8DBKmQ=",
+        "rev": "5b4f72e1705a63aace42900610c4db82cb4af0ec",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.6503.21ea275a7c46/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.6603.5b4f72e1705a/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",
