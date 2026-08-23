@@ -15,7 +15,6 @@ inputs.nixpkgs.lib.nixosSystem {
 
       unstable-hyprland
 
-      system
       nixpkgs
       nix-language
       bluetooth
