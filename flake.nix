@@ -6,7 +6,7 @@
       unstable.url = "nixpkgs/nixos-unstable";
       hyprland.url = "github:hyprwm/Hyprland";
       flake-parts.url = "github:hercules-ci/flake-parts";
-      myUtils.url = "git+ssh://git@mgt/TaiseiYokoshima/nix_utils";
+      myUtils.url = "git+ssh://git@mgh/TaiseiYokoshima/nix_utils";
    };
 
    outputs =
