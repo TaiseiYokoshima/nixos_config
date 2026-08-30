@@ -11,6 +11,7 @@ inputs.nixpkgs.lib.nixosSystem {
    };
 
    modules = with modules; [
+      { system.stateVersion = "26.05"; }
       hardware.pc
 
       unstable-hyprland
@@ -28,6 +29,5 @@ inputs.nixpkgs.lib.nixosSystem {
       users
       networking
       virtualisation
-
    ];
 }

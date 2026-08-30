@@ -11,23 +11,23 @@ inputs.nixpkgs.lib.nixosSystem {
    };
 
    modules = with modules; [
+      { system.stateVersion = "26.05"; }
       hardware.starbook
 
-      system
+      unstable-hyprland
+
       nixpkgs
       nix-language
       bluetooth
       grub-4k
       boot
-      boot
+      mullvad
       programs
       packages
       services
-      keyd
       locale
       users
       networking
       virtualisation
-
    ];
 }

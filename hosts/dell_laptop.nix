@@ -11,21 +11,20 @@ inputs.nixpkgs.lib.nixosSystem {
    };
 
    modules = with modules; [
+      { system.stateVersion = "26.05"; }
       hardware.dell_laptop
 
       unstable-hyprland
 
-      system
       nixpkgs
       nix-language
       bluetooth
       grub-4k
       boot
-      boot
+      mullvad
       programs
       packages
       services
-      keyd
       locale
       users
       networking
