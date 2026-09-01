@@ -32,20 +32,6 @@ in
       '';
    };
 
-
-
-   system.activationScripts.dotfiles = ''
-      rm -rf /home/rom/.dotfiles
-      mkdir -p /home/rom/.dotfiles
-      mkdir -p /home/rom/.config
-      cp -r ${inputs.dotfiles}/. /home/rom/.dotfiles/
-
-      chown -R rom:users /home/rom/.dotfiles
-      chown -R rom:users /home/rom/.config
-
-      sudo -u rom HOME=/home/rom /home/rom/.dotfiles/link_all.bash
-   '';
-
    imports = with modules; [
       inputs.home-manager.nixosModules.home-manager
 
