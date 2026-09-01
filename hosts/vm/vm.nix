@@ -23,13 +23,15 @@ in
          };
       }
 
-      hardware.vm
+      hardware.pc
 
       unstable-hyprland
 
       nixpkgs
       nix-language
       bluetooth
+      grub-4k
+      boot
       mullvad
       programs
       packages
@@ -37,6 +39,7 @@ in
       locale
       users
       networking
+      virtualisation
    ];
 }
 
