@@ -1,10 +1,10 @@
+{ inputs, ... }:
+let
+   modules = inputs.self.modules;
+   hardware = inputs.self.hardware;
+in
 {
-   hardware,
-   modules,
-   ...
-}:
-{
-   system.stateVersion = "26.05"; 
+   system.stateVersion = "26.05";
 
    imports = with modules; [
       hardware.pc

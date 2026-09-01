@@ -1,7 +1,8 @@
 inputs:
 inputs.s-nixpkgs.lib.nixosSystem {
+   system = "x86_64-linux";
    specialArgs = { inherit inputs; };
    modules = [
-      ./pc.nix
+      ./live.nix
    ];
 }
