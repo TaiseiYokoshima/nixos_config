@@ -8,7 +8,7 @@ in
 
    users.users.nixos.enable = lib.mkForce false;
    users.users.rom = {
-      initialHashedPassword = lib.mkForce "";
+      initialPassword = lib.mkForce "1234";
       extraGroups = lib.mkForce [
          "networkmanager"
          "wheel"
@@ -28,10 +28,11 @@ in
    services.displayManager.defaultSession = lib.mkForce "hyprland";
    services.getty.helpLine = lib.mkForce (
       ''
-         The "rom" and "root" accounts have empty passwords.
+         The "rom" account password is "1234".
+         The "root" account has an empty password.
 
-         To log in over ssh you must set a password for either "rom" or "root"
-         with `passwd` (prefix with `sudo` for "root"), or add your public key to
+         To log in over ssh as root you must set a root password with
+         `sudo passwd root`, or add your public key to
          /home/rom/.ssh/authorized_keys or /root/.ssh/authorized_keys.
 
          To set up a wireless connection, run `nmtui`.
