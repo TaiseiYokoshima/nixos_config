@@ -20,8 +20,11 @@ in
    };
    users.users.root.initialHashedPassword = lib.mkForce "";
 
-   services.getty.autologinUser = lib.mkForce "rom";
-   services.displayManager.autoLogin.enable = lib.mkForce false;
+   services.getty.autologinUser = lib.mkForce null;
+   services.displayManager.autoLogin = {
+      enable = lib.mkForce false;
+      user = lib.mkForce null;
+   };
    services.getty.helpLine = lib.mkForce (
       ''
          The "rom" and "root" accounts have empty passwords.
@@ -99,7 +102,7 @@ in
          };
       }
 
-      "${modulesPath}/installer/cd-dvd/installation-cd-minimal.nix"
+      "${modulesPath}/installer/cd-dvd/installation-cd-graphical-calamares-gnome.nix"
 
       unstable-hyprland
 
