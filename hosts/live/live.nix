@@ -25,6 +25,7 @@ in
       enable = lib.mkForce false;
       user = lib.mkForce null;
    };
+   services.displayManager.defaultSession = lib.mkForce "hyprland";
    services.getty.helpLine = lib.mkForce (
       ''
          The "rom" and "root" accounts have empty passwords.
@@ -80,6 +81,8 @@ in
          chown -R rom:users /home/rom/.dotfiles
          chown -R rom:users /home/rom/.config
          chmod -R u+rwX /home/rom/.dotfiles /home/rom/.config
+
+         rm /home/rom/.config/fish -rf
 
          runuser -u rom -- env HOME=/home/rom bash -lc 'cd "$HOME" && bash "$HOME/.dotfiles/link_all.bash"'
       '';
