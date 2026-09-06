@@ -1,13 +1,8 @@
-{ inputs, pkgs, ... }:
-let
-   unstable = import inputs.u-nixpkgs {
-      system = pkgs.stdenv.hostPlatform.system;
-   };
-in
+{ u-pkgs, ... }:
 {
    programs.hyprland = {
       enable = true;
-      package = unstable.hyprland;
-      portalPackage = unstable.xdg-desktop-portal-hyprland;
+      package = u-pkgs.hyprland;
+      portalPackage = u-pkgs.xdg-desktop-portal-hyprland;
    };
 }
