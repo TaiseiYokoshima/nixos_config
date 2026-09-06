@@ -1,4 +1,4 @@
-{ config, inputs, pkgs, modulesPath, lib, ... }:
+{ config, inputs, pkgs, u-pkgs, s-pkgs, modulesPath, lib, ... }:
 {
    system.stateVersion = "26.05";
 
@@ -90,19 +90,19 @@
 
       {
          home-manager.extraSpecialArgs = {
-            inputs = inputs // inputs.home.inputs;
-            modules = inputs.home.modules;
-            u-pkgs = import inputs.u-nixpkgs { system = pkgs.stdenv.hostPlatform.system; config.allowUnfree = true; };
+            inputs = inputs.home.inputs;
+            homeModules = inputs.home.homeModules;
+            inherit u-pkgs s-pkgs;
          };
 
-         home-manager.users.rom = {
-            imports = [
-               (inputs.home.outPath + "/entries/general/general.nix")
-            ];
-         };
+         home-manager.users.rom.imports = with inputs.home.modules; [
+            home
+            input
+            packages
+            gnome_apps
+            xdg
+         ];
       }
-
       "${modulesPath}/installer/cd-dvd/installation-cd-graphical-calamares-gnome.nix"
    ];
 }
-

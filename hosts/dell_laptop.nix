@@ -1,18 +1,7 @@
-{
-   inputs,
-   self,
-   hardware,
-   modules,
-   ...
-}:
-inputs.nixpkgs.lib.nixosSystem {
-   specialArgs = {
-      inherit inputs self modules;
-   };
-
+{ modules, ... }: {
+   hardware = "dell_laptop";
    modules = with modules; [
       { system.stateVersion = "26.05"; }
-      hardware.dell_laptop
 
       unstable-hyprland
 
