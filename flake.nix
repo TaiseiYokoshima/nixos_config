@@ -19,10 +19,11 @@
       let
          fetchModules = inputs.myUtils.lib.fetchModules;
          fetchConfigs = inputs.myUtils.lib.fetchConfigs;
+         nioxsBuilder = inputs.myUtils.lib.nixosBuilder;
       in
       {
          hardware = fetchModules ./hardware;
          modules = fetchModules ./modules;
-         nixosConfigurations = fetchConfigs ./hosts inputs;
+         nixosConfigurations = fetchConfigs nioxsBuilder ./hosts inputs; 
       };
 }

@@ -1,6 +1,6 @@
 { modules, ... }: {
    release = "stable";
-   hardware = "starbook";
+   hardware = "vm";
    modules = with modules; [
       { system.stateVersion = "26.05"; }
 

@@ -1,16 +1,10 @@
-{ inputs, ... }:
-let
-   modules = inputs.self.modules;
-   hardware = inputs.self.hardware;
-in
-{
-   system.stateVersion = "26.05";
-
-   imports = with modules; [
-      hardware.pc
+{ modules, ... }: {
+   release = "stable";
+   hardware = "pc";
+   modules = with modules; [
+      { system.stateVersion = "26.05"; }
 
       unstable-hyprland
-
       nixpkgs
       nix-language
       bluetooth

@@ -1,15 +1,12 @@
-{ modules, ... }: {
-   release = "stable";
-   hardware = "starbook";
+{ modules, ... }:
+{
+   system = "x86_64-linux";
    modules = with modules; [
-      { system.stateVersion = "26.05"; }
-
+      live
       unstable-hyprland
       nixpkgs
       nix-language
       bluetooth
-      grub-4k
-      boot
       mullvad
       programs
       packages
@@ -17,6 +14,5 @@
       locale
       users
       networking
-      virtualisation
    ];
 }

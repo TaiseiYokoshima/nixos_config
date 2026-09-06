@@ -1,8 +1,4 @@
 { config, inputs, pkgs, modulesPath, lib, ... }:
-let
-   modules = inputs.self.modules;
-   hardware = inputs.self.hardware;
-in
 {
    system.stateVersion = "26.05";
 
@@ -89,7 +85,7 @@ in
       '';
    };
 
-   imports = with modules; [
+   imports = [
       inputs.home-manager.nixosModules.home-manager
 
       {
@@ -107,18 +103,6 @@ in
       }
 
       "${modulesPath}/installer/cd-dvd/installation-cd-graphical-calamares-gnome.nix"
-
-      unstable-hyprland
-
-      nixpkgs
-      nix-language
-      bluetooth
-      mullvad
-      programs
-      packages
-      services
-      locale
-      users
-      networking
    ];
 }
+
