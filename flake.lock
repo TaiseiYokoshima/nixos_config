@@ -35,11 +35,11 @@
     },
     "dotfiles": {
       "locked": {
-        "lastModified": 1788213666,
-        "narHash": "sha256-P9mghthJULER1Mrj+Afun4GSh3pmPnanf2cUjdwhh3U=",
+        "lastModified": 1788732682,
+        "narHash": "sha256-hCtcNnf4R7cQbCaW9GWS1Q+OGJxi6xL4KUcyPba13h0=",
         "ref": "refs/heads/main",
-        "rev": "a3e37a9c4ef5e59fd346c76910fc4610a8db8da1",
-        "revCount": 135,
+        "rev": "aa7d695d87c3ad8fa4fc750f648c2585d4a4fde3",
+        "revCount": 136,
         "submodules": true,
         "type": "git",
         "url": "ssh://git@mgh/TaiseiYokoshima/.dotfiles"
@@ -171,11 +171,11 @@
         "zen-browser": "zen-browser"
       },
       "locked": {
-        "lastModified": 1788706286,
-        "narHash": "sha256-L+6Hatmgux54GN9X8XvinENur9N4iBiFW8sweFrSAXc=",
+        "lastModified": 1788741434,
+        "narHash": "sha256-5UT9f+/c+sWhLLyT4DObHQE27QkRwAnySIOBIkIRZUw=",
         "ref": "refs/heads/main",
-        "rev": "1657ef41923878adb0570c6d53a77e92178b345e",
-        "revCount": 366,
+        "rev": "2e8e1593dbb05f64f78d33e3236a76a1fa209d30",
+        "revCount": 368,
         "type": "git",
         "url": "ssh://git@mgh/TaiseiYokoshima/home-manager"
       },
@@ -526,11 +526,11 @@
     },
     "myUtils": {
       "locked": {
-        "lastModified": 1788702849,
-        "narHash": "sha256-auQ5L4QAeqCO1cr1kNEwXRDcm+RN0hhjfXQVxc2z2v4=",
+        "lastModified": 1788713186,
+        "narHash": "sha256-ADaHTs7UoD45ntFuvpAB72hh4rEAuLCr5dev17wOVhk=",
         "ref": "refs/heads/main",
-        "rev": "22ce12ab7e138980b7395aecbb95cc613881a158",
-        "revCount": 48,
+        "rev": "0961864c97dfe99e2b6c1592d4afe4dc49b10b00",
+        "revCount": 49,
         "type": "git",
         "url": "ssh://git@mgh/TaiseiYokoshima/nix_utils"
       },
@@ -541,11 +541,11 @@
     },
     "myUtils_2": {
       "locked": {
-        "lastModified": 1788702849,
-        "narHash": "sha256-auQ5L4QAeqCO1cr1kNEwXRDcm+RN0hhjfXQVxc2z2v4=",
+        "lastModified": 1788713186,
+        "narHash": "sha256-ADaHTs7UoD45ntFuvpAB72hh4rEAuLCr5dev17wOVhk=",
         "ref": "refs/heads/main",
-        "rev": "22ce12ab7e138980b7395aecbb95cc613881a158",
-        "revCount": 48,
+        "rev": "0961864c97dfe99e2b6c1592d4afe4dc49b10b00",
+        "revCount": 49,
         "type": "git",
         "url": "ssh://git@mgh/TaiseiYokoshima/nix_utils"
       },
@@ -715,11 +715,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788659825,
-        "narHash": "sha256-daBPX2MPsVb0fD/wTX68K6lWU4uqWwNrmqhcBTCGTwc=",
+        "lastModified": 1788726832,
+        "narHash": "sha256-JpjEfaqfyieyDS2KYxJ/IRamc/hx4eRWvxtZzI2Ej4k=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "224da6dd4360c5d2400fea967736c8195396ebb9",
+        "rev": "830ce58c9da58853166ffd8a6a1497c5d4b47a6b",
         "type": "github"
       },
       "original": {
@@ -857,11 +857,11 @@
         "unstable_nixpkgs": "unstable_nixpkgs"
       },
       "locked": {
-        "lastModified": 1788015826,
-        "narHash": "sha256-hvF7tbj3mA/b6r7WSAz3fTmnUb6XIPbf86FdVPoOlfM=",
+        "lastModified": 1788740886,
+        "narHash": "sha256-3ecTtp6BQddF9xeUgyZzzMlcnqkRhIR06IoVZ4f1hFU=",
         "ref": "refs/heads/main",
-        "rev": "da7c087423db918e8a939260163e2496537eaf89",
-        "revCount": 2,
+        "rev": "1cd764fb0f659c06f0e28791c1e106d947da7e9f",
+        "revCount": 3,
         "type": "git",
         "url": "ssh://git@mgh/TaiseiYokoshima/shell_scripts"
       },
